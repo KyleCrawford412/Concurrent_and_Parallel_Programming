@@ -1,10 +1,16 @@
-CXX = g++
-CXXFLAGS = -std=c++11 -Wall -Wextra
+CXX := g++
+CXXFLAGS := -std=c++11 -Wall -Wextra -Wpedantic
 
-all: mytoolkit.x
+all: mytree.x mytime.x mymtimes.x
 
-mytoolkit.x: mytoolkit.cpp
-	$(CXX) $(CXXFLAGS) -o mytoolkit mytoolkit.cpp
+mytree.x: mytree.cpp
+	$(CXX) $(CXXFLAGS) -o $@ $<
+
+mytime.x: mytime.cpp
+	$(CXX) $(CXXFLAGS) -o $@ $<
+
+mymtimes.x: mymtimes.cpp
+	$(CXX) $(CXXFLAGS) -o $@ $<
 
 clean:
-	rm -f mytoolkit
+	rm -f mytree mytime mymtimes
