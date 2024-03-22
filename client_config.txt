@@ -1,0 +1,2 @@
+servhost: linprog8.cs.fsu.edu 
+servport: 12345 

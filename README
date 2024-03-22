@@ -1,0 +1,11 @@
+
+
+
+You may have to adjust the port and host name in the config files to get the program to run properly otherwise they wont connect. 
+
+You can run the program by doing make all, or make chat_server and make chat_client. 
+
+The program was able to connect clients however they weren't able to send messages without the server crashing. When trying to fix that issue now clients can't login without the server crashing either.
+basic functionality still works like login and logout with error catching for them.  
+
+Also, pthreads are set up to handle multiple clients.

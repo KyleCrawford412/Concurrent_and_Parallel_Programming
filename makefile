@@ -1,10 +1,13 @@
-CXX = g++
-CXXFLAGS = -std=c++11 -Wall -Wextra
+CC = g++
+CFLAGS = -std=c++11 -Wall -pthread
 
-all: mytoolkit.x
+all: chat_client chat_server
 
-mytoolkit.x: mytoolkit.cpp
-	$(CXX) $(CXXFLAGS) -o mytoolkit mytoolkit.cpp
+chat_client: chat_client.cpp
+	$(CC) $(CFLAGS) chat_client.cpp -o chat_client
+
+chat_server: chat_server.cpp
+	$(CC) $(CFLAGS) chat_server.cpp -o chat_server
 
 clean:
-	rm -f mytoolkit
+	rm -f chat_client chat_server
